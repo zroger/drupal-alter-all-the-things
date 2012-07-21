@@ -110,7 +110,7 @@ h1 {
 
 /* COMMON STEP STYLES */
 .step {
-  width: 900px;
+  width: 960px;
   padding: 40px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -153,8 +153,8 @@ h1 {
  */
 .slide {
   display: block;
-  width: 900px;
-  height: 700px;
+  width: 960px;
+  height: 600px;
   padding: 40px 60px;
   border-radius: 10px;
   background-color: white;
@@ -182,6 +182,10 @@ h1 {
   margin-top: 1em; }
 .slide li {
   margin: 0 0 0.5em; }
+.slide code {
+  font-family: "Inconsolata", fixed; }
+.slide .highlight {
+  font-size: 24px; }
 
 /* IMPRESS NOT SUPPORTED STYLES */
 .fallback-message {
@@ -208,3 +212,34 @@ h1 {
 @media print {
   .step {
     page-break-after: always; } }
+
+.slide {
+  display: table;
+  padding: 0;
+}
+
+.slide .inner {
+  display: table-cell;
+  max-width: 840px;
+  padding: 40px 60px;
+}
+
+.slide.title .inner {
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.slide.function .inner {
+  padding-top: 100px;
+}
+
+.slide.code.small .highlight {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.slide.code.large .highlight {
+  font-size: 42px;
+  line-height: 1.5;
+}
