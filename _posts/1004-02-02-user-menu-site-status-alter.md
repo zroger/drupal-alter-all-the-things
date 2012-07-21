@@ -5,7 +5,7 @@ published: true
 classes:
  - slide
  - code
- - title
+ - small
 data:
   x: 0
   y: 0
@@ -32,24 +32,5 @@ function user_menu_site_status_alter(&$menu_site_status, $path) {
           // Disable offline mode.
           $menu_site_status = MENU_SITE_ONLINE;
           break;
-        default:
-          if (strpos($path, 'user/reset/') === 0) {
-            // Disable offline mode.
-            $menu_site_status = MENU_SITE_ONLINE;
-          }
-          break;
-      }
-    }
-  }
-  if (user_is_logged_in()) {
-    if ($path == 'user/login') {
-      // If user is logged in, redirect to 'user' instead of giving 403.
-      drupal_goto('user');
-    }
-    if ($path == 'user/register') {
-      // Authenticated user should be redirected to user edit page.
-      drupal_goto('user/' . $GLOBALS['user']->uid . '/edit');
-    }
-  }
-}
+  // ...
 {%endhighlight%}
