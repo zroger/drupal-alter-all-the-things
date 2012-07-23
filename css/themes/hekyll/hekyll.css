@@ -104,7 +104,7 @@ a:hover {
   background: #e7e8e1; }
 
 h1 {
-  color: #6c577a;
+  color: #15367F;
   font-weight: bold;
   font-size: 2em; }
 
@@ -180,6 +180,10 @@ h1 {
   line-height: 100%; }
 .slide ul, .slide p, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
   margin-top: 1em; }
+.slide ol {
+  list-style: decimal outside; }
+.slide ul {
+  list-style: disc outside; }
 .slide li {
   margin: 0 0 0.5em; }
 .slide code {
@@ -242,4 +246,15 @@ h1 {
 .slide.code.large .highlight {
   font-size: 42px;
   line-height: 1.5;
+}
+
+.slide.section-title {
+  background: #667887;
+}
+.slide.section-title h1 {
+  color: white;
+}
+
+body {
+  background: url(./bg-city.jpeg) no-repeat center center;
 }
